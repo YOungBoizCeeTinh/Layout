@@ -21,8 +21,9 @@ export default class User extends Component {
 
   async fetchProduct() {
     try {
-      let response = await axios.get('http://localhost:8080/product');
+      const response = await axios.get('http://localhost:8080/product');
       this.setState({ products: response.data.result });
+      
       
     } catch (error) {
       this.setState({ error: error.message });
